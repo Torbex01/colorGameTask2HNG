@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #a4508b, #5f0a87);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+@keyframes rainbow {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 900;
+    animation: rainbow 40s linear infinite;
+}
+
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+h4 {
+    color: gray;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.gameDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#newGameButton, #reshuffleBtn {
+    background: #4caf50;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#reshuffleBtn {
+    background: #007bff;
+    margin-bottom: 20px;
+}
+
+#newGameButton:hover {
+    background: #388e3c;
+}
+
+#reshuffleBtn:hover {
+    background: #0056b3;
+}
+
+#colorBox {
+    width: 130px;
+    height: 130px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 15px 0;
+    transition: background 0.5s ease-in-out;
+}
+
+#gameStatus {
+    margin: 6px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.colorOptions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+
+.options {
+    width: 90px;
+    height: 90px;
+    background: orangered;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+}
+
+.options:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.options:active {
+    transform: scale(0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.options {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@media (max-width: 480px) {
+    .options {
+        width: 75px;
+        height: 75px;
+    }
+    
+    #colorBox {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 350px) {
+    .container{
+        width: 95%;
+    }
+    .options {
+        width: 55px;
+        height: 55px;
+    }
+    
+    #colorBox {
+        width: 70px;
+        height: 70px;
+    }
+    h2{
+        font-size: 17px;
+    }
+
+    h4{
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    nav{
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    #colorBox{
+        margin-bottom: 0;
+    }
+
+    #reshuffleBtn {
+        margin-bottom: 7px;
+        margin-top: 0;
+    }
+
+    #gameStatus {
+        margin: 10px 0 0 0;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .colorOptions {
+        gap: 5px;
+    }
+}

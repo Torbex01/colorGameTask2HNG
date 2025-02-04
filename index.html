@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Game</title>
+    <link rel="stylesheet" href="/colorGame.css">
+</head>
+<body>
+  <main class="container">
+    <h2>GUESS THE COLOR!</h2>
+    <h4 data-testid="gameInstructions">(Guess the color that matches the big box)</h4>
+    <section class="gameDisplay">
+       <nav> <h3 data-testid="score">Score: <span id="score">0</span></h3>
+        <button data-testid="newGameButton" id="newGameButton">New Game</button></nav>
+        <div data-testid="colorBox" id="colorBox"></div>
+        <div data-testid="gameStatus" id= "gameStatus"></div>
+    </section>
+    <button id="reshuffleBtn">Refresh</button>
+    <section data-testid="colorOptions" class="colorOptions">
+        <div class="options"></div>
+        <div class="options"></div>
+        <div class="options"></div>
+        <div class="options"></div>
+        <div class="options"></div>
+        <div class="options"></div>
+    </section>
+  </main>
+
+<script src="/colorGame.js"></script>    
+</body>
+</html>
