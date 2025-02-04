@@ -55,7 +55,7 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 nav {
@@ -110,15 +110,15 @@ nav {
 .colorOptions {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    gap: 10px;
     max-width: 300px;
     margin: 0 auto;
 }
 
 
 .options {
-    width: 90px;
-    height: 90px;
+    width: 85px;
+    height: 85px;
     background: orangered;
     border-radius: 10px;
     cursor: pointer;
