@@ -62,8 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
             score = 0;
             scoreDisplay.textContent = score;
             gameActive = false;
-
-            setTimeout(startNewGame, 1000);
         }
     }
 
