@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             gameStatus.textContent = "Wrong! ❌ Game Over!";
             gameStatus.style.color = "red";
-            score = 0;
             scoreDisplay.textContent = score;
             gameActive = false;
         }
