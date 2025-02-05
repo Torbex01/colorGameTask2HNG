@@ -183,6 +183,10 @@ nav {
         width: 100px;
         height: 100px;
     }
+
+    h3{
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 350px) {
