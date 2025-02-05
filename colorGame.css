@@ -187,6 +187,10 @@ nav {
     h3{
         font-size: 14px;
     }
+
+    #newGameButton{
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 350px) {
