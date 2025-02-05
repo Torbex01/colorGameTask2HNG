@@ -101,6 +101,28 @@ nav {
     transition: background 0.5s ease-in-out;
 }
 
+@keyframes correctAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes wrongAnimation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.correct {
+    animation: correctAnimation 0.5s ease-in-out;
+}
+
+.wrong {
+    animation: wrongAnimation 0.3s ease-in-out;
+}
+
 #gameStatus {
     margin: 6px 0;
     font-size: 18px;

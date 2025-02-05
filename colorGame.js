@@ -2,10 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const colorBox = document.getElementById("colorBox");
     const options = document.querySelectorAll(".options");
     const scoreDisplay = document.getElementById("score");
+    const highscoreDisplay = document.getElementById("highscore");
     const gameStatus = document.getElementById("gameStatus");
     const newGameButton = document.getElementById("newGameButton");
     const reshuffleButton = document.getElementById("reshuffleBtn");
-
+    let highscoreValue = localStorage.getItem("highscore") || 0;
+    highscoreDisplay.textContent = highscoreValue;
     let targetColor;
     let score = 0;
     let gameActive = true;
@@ -48,6 +50,16 @@ document.addEventListener("DOMContentLoaded", () => {
             gameStatus.style.color = "green";
             score++;
             scoreDisplay.textContent = score;
+
+            if (score > highscoreValue){
+                highscoreValue =score;
+                localStorage.setItem ("highscore", highscoreValue);
+                highscoreDisplay.textContent = highscoreValue;
+            }
+
+            colorBox.classList.add('correct');
+            setTimeout(() => colorBox.classList.remove('correct'), 500);
+
             gameActive = false;
 
             setTimeout(() => {
@@ -61,6 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
             gameStatus.style.color = "red";
             scoreDisplay.textContent = score;
             gameActive = false;
+
+            colorBox.classList.add('wrong');
+            setTimeout(()=> colorBox.classList.remove('wrong'), 500);
         }
     }
 

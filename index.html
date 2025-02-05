@@ -9,10 +9,12 @@
 <body>
   <main class="container">
     <h2>GUESS THE COLOR!</h2>
-    <h4 data-testid="gameInstructions">(Guess the color that matches the big box)</h4>
+    <h4 data-testid="gameInstructions">INSTRUCTION: Guess the color from the options below that matches the big box.</h4>
     <section class="gameDisplay">
        <nav> <h3 data-testid="score">Score: <span id="score">0</span></h3>
-        <button data-testid="newGameButton" id="newGameButton">New Game</button></nav>
+              <h3>HighScore: <span id="highscore">0</span></h3>
+        <button data-testid="newGameButton" id="newGameButton">New Game</button>
+      </nav>
         <div data-testid="colorBox" id="colorBox"></div>
         <div data-testid="gameStatus" id= "gameStatus"></div>
     </section>
